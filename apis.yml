@@ -9,8 +9,15 @@ description: >-
   shared task queue where teams triage and resolve them. A drag-and-drop playbook
   builder and an operational AI copilot automate routine responses, while metrics
   track resolution over time. Avenue is used by operations leaders at
-  marketplaces, fintech, and healthcare companies. It was founded in 2021 and is
-  backed by Y Combinator, Slack Fund, Accel, and Flexport.
+  marketplaces, fintech, and healthcare companies. It was founded in 2021 by
+  Justin Bleuel and Jeff Barg, and was backed by Y Combinator, Slack Fund, Accel,
+  Flexport, Lachy Groom, and Elad Gil. Avenue was acquired by Clay in January 2025
+  and the product has since been wound down: the marketing site at avenue.app is
+  still served but frozen at "© 2024 Avenue", the application host
+  app.useavenue.com returns HTTP 404 "Application not found", and the Intercom help
+  center at docs.useavenue.com returns HTTP 403. Avenue never published a public
+  API, OpenAPI specification, SDK, MCP server, or agent card; the only developer-
+  facing surface it documented was inbound and outbound webhooks.
 url: https://raw.githubusercontent.com/api-evangelist/avenue/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -31,7 +38,7 @@ accessModel:
   method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-18'
+modified: '2026-08-14'
 image: https://framerusercontent.com/images/P7bVoSUqmRbIfCE0DPeHoRKwyA.png
 tags:
 - Company
@@ -51,6 +58,18 @@ maintainers:
 common:
 - type: DomainSecurity
   url: security/avenue-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/avenue-lifecycle.yml
+- type: Webhooks
+  url: asyncapi/avenue-webhooks.yml
+- type: Plans
+  url: plans/avenue-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/avenue-rate-limits.yml
+- type: LLMsTxt
+  url: llms/avenue-llms.txt
+- type: GitHubOrganization
+  url: https://github.com/Avenue-Alerting
 - type: Website
   url: https://avenue.app/
 - type: Blog
@@ -64,7 +83,29 @@ common:
 - type: PrivacyPolicy
   url: https://avenue.app/privacy-policy
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-14'
+  status: minimal
+  artifacts_added: 7
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Avenue was acquired by Clay in January 2025 and the product is gone — the
+    application host app.useavenue.com, which the live site's "Log in" button still
+    points at, returns HTTP 404 "Application not found" from Railway on every path,
+    and the Intercom help center at docs.useavenue.com returns HTTP 403 (Cloudflare
+    error 1014), leaving only a frozen Framer marketing site footered "© 2024
+    Avenue".
+  evidence:
+  - url: https://app.useavenue.com/signin
+    status: 404
+  - url: https://docs.useavenue.com/
+    status: 403
+  - url: https://avenue.app/openapi.json
+    status: 404
+  - url: https://avenue.app/.well-known/agent-card.json
+    status: 404
+  - url: https://avenue.app/
+    status: 200
+  checked: '2026-08-14'
