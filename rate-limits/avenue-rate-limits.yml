@@ -1,0 +1,14 @@
+generated: '2026-08-14'
+method: searched
+source: https://avenue.app/pricing, https://avenue.app/integrations, https://docs.useavenue.com/
+limit_count: 0
+limits: []
+headers: []
+status_on_exhaustion: null
+note: >-
+  Avenue publishes no rate limits. There is no public API to rate-limit: the site has
+  no /docs, /api or /developers section (all return HTTP 404 on avenue.app), the
+  pricing page states no quota or throughput ceiling on either tier, and the Intercom
+  help center at docs.useavenue.com — where the integration and webhook instructions
+  live — currently returns HTTP 403 (Cloudflare error 1014, CNAME Cross-User Banned)
+  and cannot be read. An honest zero: nothing was found to record, not a limit of zero.

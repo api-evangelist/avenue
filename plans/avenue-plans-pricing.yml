@@ -1,0 +1,41 @@
+generated: '2026-08-14'
+method: searched
+source: https://avenue.app/pricing
+plan_count: 2
+currency: USD
+billing_period: month
+unit: seat
+plans:
+- name: Per Seat
+  audience: Up to 100 employees
+  price: 59
+  currency: USD
+  period: month
+  unit: per seat
+  cta: Get in touch
+  quota: not published
+  overage: not published
+  limits: not published
+- name: Enterprise
+  audience: 100+ employees
+  price: null
+  currency: USD
+  period: null
+  cta: Get in touch
+  quota: not published
+  overage: not published
+  limits: not published
+  note: contact-sales only; no published price
+trial:
+  offered: true
+  note: >-
+    The page advertises "Sign up for a free trial", but every sign-up path is dead —
+    the "Log in" link targets https://app.useavenue.com/signin, which returns HTTP 404
+    {"message":"Application not found"} from Railway, and the free-trial CTA points at
+    a reform.app early-access form.
+note: >-
+  Pricing is a seat-price plus a contact-sales enterprise tier; no API pricing, no
+  metered/usage rates and no per-tier quota or rate limit are published anywhere on
+  the site. The pricing page footer reads "© 2024 Avenue", and Avenue was acquired by
+  Clay in January 2025 (see lifecycle/avenue-lifecycle.yml), so these figures describe
+  a product that is no longer being sold.

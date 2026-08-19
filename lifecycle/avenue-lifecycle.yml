@@ -1,0 +1,63 @@
+generated: '2026-08-14'
+method: searched
+source: >-
+  https://avenue.app/ , https://app.useavenue.com/signin ,
+  https://www.clay.com/blog/avenue , https://www.linkedin.com/company/useavenue
+product_status: discontinued
+versioning:
+  scheme: null
+  current: null
+  docs: null
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No deprecation or sunset policy is published, and none was published before the
+    product was wound down.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+changelog: null
+deprecated_operations: []
+acquisition:
+  acquirer: Clay
+  acquirer_url: https://www.clay.com/
+  announced: '2025-01-21'
+  announcement: https://www.clay.com/blog/avenue
+  note: >-
+    Clay acquired Avenue in January 2025 to bring alerting/workflow automation to
+    growth teams acting on intent signals. Avenue's own LinkedIn page now reads
+    "Avenue (Acquired by Clay)".
+evidence:
+- url: https://app.useavenue.com/signin
+  status: 404
+  observed: '2026-08-14'
+  note: >-
+    The product application host answers 404 {"status":"error","code":404,
+    "message":"Application not found"} from Railway for EVERY path, including "/".
+    The application is deployed nowhere; the "Log in" button on the live marketing
+    site leads to a dead host.
+- url: https://docs.useavenue.com/
+  status: 403
+  observed: '2026-08-14'
+  note: >-
+    The Intercom-hosted help center (CNAME to us.intercomhelpcenter.com) returns
+    Cloudflare error 1014 — CNAME Cross-User Banned — so the only integration and
+    webhook documentation Avenue ever published is unreachable.
+- url: https://avenue.app/
+  status: 200
+  observed: '2026-08-14'
+  note: >-
+    The Framer-hosted marketing site is still served, frozen: every page footer reads
+    "© 2024 Avenue", and the blog's newest post predates the acquisition.
+- url: https://github.com/Avenue-Alerting
+  status: 200
+  observed: '2026-08-14'
+  note: Verified org; 4 public repos, all forks, last activity 2023-03-09.
+note: >-
+  Avenue's marketing site remains online as an archive, but the product itself is
+  gone: the application host is unrouted, the documentation host is broken, and the
+  company has been absorbed by Clay. No StatusPage or Deprecation pointer is emitted —
+  Avenue never published either, and asserting one now would credit the provider with
+  operational transparency it does not have.

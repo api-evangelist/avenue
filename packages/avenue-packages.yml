@@ -1,0 +1,28 @@
+generated: '2026-08-14'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org, github.com/Avenue-Alerting, and the Avenue
+  site (avenue.app/integrations)
+package_count: 0
+packages: []
+note: >-
+  Avenue publishes no first-party client library in any registry. npm search for
+  "avenue"/"useavenue" returns only unrelated packages (npm `avenue` is bigeasy's
+  async/await event queue); PyPI `Avenue` 0.2.2 is Corver Development's highway
+  routing library, unrelated to this company. Avenue's verified GitHub organization
+  — https://github.com/Avenue-Alerting — holds 4 public repositories and ALL FOUR are
+  forks of third-party projects (runnable-templates, temporal, zod-prisma,
+  handlebars-helpers), with no first-party source and no push since 2023-03-09. No
+  SDKs pointer is emitted; there is no SDK to point at.
+registries_checked:
+- registry: npm
+  query: avenue, useavenue, avenue-alerting
+  first_party_hits: 0
+- registry: pypi
+  query: avenue
+  first_party_hits: 0
+  note: PyPI `Avenue` 0.2.2 belongs to CorverDevelopment (highway routing), not this company
+- registry: github
+  query: github.com/Avenue-Alerting
+  first_party_hits: 0
+  note: 4 public repos, all forks, last updated 2023-03-09

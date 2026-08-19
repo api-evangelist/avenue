@@ -1,0 +1,95 @@
+generated: '2026-08-14'
+method: probed
+source: live GET of the /.well-known/ discovery surface on every Avenue host
+note: >-
+  Every /.well-known/ path returned a hard miss on every Avenue host. avenue.app
+  (the Framer-hosted marketing site) answers a real 404 for unknown paths — it is
+  not an SPA catch-all, so these 404s are genuine absences and not false negatives.
+  app.useavenue.com — the product host the site's "Log in" button points at — is a
+  Railway deployment that now answers 404 {"status":"error","code":404,
+  "message":"Application not found"} for EVERY path including "/", so nothing can be
+  served from it. docs.useavenue.com is a CNAME to us.intercomhelpcenter.com that
+  currently returns Cloudflare error 1014 (CNAME Cross-User Banned) with HTTP 403.
+  NO WellKnown or SecurityTxt pointer is emitted: nothing returned a 200 carrying a
+  real document.
+hosts:
+- host: https://avenue.app
+  role: website
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://app.useavenue.com
+  role: application (Railway) — offline
+  documents:
+  - path: /
+    status: 404
+  - path: /signin
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://docs.useavenue.com
+  role: help center (Intercom) — unreachable
+  documents:
+  - path: /
+    status: 403
+    note: Cloudflare error 1014 (CNAME Cross-User Banned) on every path
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+  - path: /openapi.json
+    status: 403
+  - path: /llms.txt
+    status: 403
+- host: https://useavenue.com
+  role: legacy corporate domain
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+    note: 302 to https://avenue.app/ for every path
+  - path: /openapi.json
+    status: 302
+  - path: /llms.txt
+    status: 302
+non_resolving_hosts:
+- api.useavenue.com
+- api.avenue.app
+- docs.avenue.app
+- help.avenue.app
+- beta.useavenue.com
+summary:
+  hits: 0
+  well_known_pointer_emitted: false
+  security_txt_pointer_emitted: false

@@ -1,0 +1,58 @@
+generated: '2026-08-14'
+method: searched
+source: https://avenue.app/integrations/webhooks
+spec_type: none
+asyncapi_published: false
+note: >-
+  Avenue publishes NO AsyncAPI document — /asyncapi.yaml and every /.well-known/ path
+  404 on avenue.app, and the GitHub org (github.com/Avenue-Alerting) contains only
+  forks. What Avenue does publish is a webhook surface described in prose on its own
+  integrations pages, captured below verbatim in substance. No channel list, no event
+  names, no payload schema and no signing/verification scheme are published anywhere
+  on the public site, so nothing further can be derived without fabricating it. The
+  Intercom help-center article that carried the setup instructions
+  (docs.useavenue.com/en/articles/6957974-webhook-integrations) is indexed by search
+  engines but currently returns HTTP 403 (Cloudflare error 1014), so it could not be
+  read.
+webhooks:
+  directions:
+  - direction: inbound
+    label: Incoming webhook
+    description: >-
+      Third-party services push data into Avenue, which Avenue can then monitor and
+      alert on.
+    source: https://avenue.app/integrations/webhooks
+  - direction: outbound
+    label: Outgoing webhook
+    description: >-
+      Avenue sends an occurrence-based payload of messages/events/data from SQL query
+      triggers on the platform over HTTPS to a customer-supplied endpoint.
+    source: https://avenue.app/integrations/webhooks
+  role_in_product: >-
+    Webhooks are listed as a "Destination" in Avenue's integration catalog alongside
+    Slack, Zendesk, Twilio, Front, Intercom, Linear, Asana, Notion, Trello, Telegram,
+    WhatsApp, SendGrid, Customer.io, HubSpot and Salesforce; a webhook integration can
+    also be reused as an Avenue "Subscriber" notification type.
+  event_catalog: not published
+  payload_schema: not published
+  signature_verification: not published
+  retry_policy: not published
+  test_tooling:
+    name: Send Test Signal
+    description: >-
+      The help center describes a "Send Test Signal" button that fires a test payload
+      at a configured webhook integration and confirms delivery.
+    source: https://docs.useavenue.com/en/articles/6957974-webhook-integrations
+    verified: false
+    note: source article returns HTTP 403 (Cloudflare 1014); recorded from the search index only
+evidence:
+- url: https://avenue.app/integrations/webhooks
+  status: 200
+- url: https://avenue.app/integrations
+  status: 200
+- url: https://docs.useavenue.com/en/articles/6957974-webhook-integrations
+  status: 403
+caveat: >-
+  This webhook surface belongs to a product that is no longer operating — the
+  application host app.useavenue.com returns 404 "Application not found" and Avenue
+  was acquired by Clay in January 2025. See lifecycle/avenue-lifecycle.yml.
