@@ -55,10 +55,11 @@ tags:
 - Company
 - Cloud Saas
 - Observability
-- Workflow-Automation
+- Workflow Automation
 - Alerting
 - Revenue Operations
 - Task Queue
+- Defunct
 tags_raw:
 - Company
 - Cloud Saas
@@ -68,6 +69,8 @@ tags_raw:
 - Alerting
 - RevOps
 - Task Queue
+- Workflow-Automation
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -128,3 +131,4 @@ x-coverage:
   - url: https://avenue.app/
     status: 200
   checked: '2026-08-14'
+x-status: defunct
