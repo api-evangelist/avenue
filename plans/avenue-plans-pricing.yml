@@ -39,3 +39,26 @@ note: >-
   the site. The pricing page footer reads "© 2024 Avenue", and Avenue was acquired by
   Clay in January 2025 (see lifecycle/avenue-lifecycle.yml), so these figures describe
   a product that is no longer being sold.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  - seat
+  units:
+  - seat
+  plans:
+  - name: Per Seat
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Enterprise
+    access: other
+    model: metered
+    model_how: derived
+    units: []
+    periods: []
