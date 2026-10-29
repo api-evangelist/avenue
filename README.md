@@ -64,6 +64,67 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Avenue is a company surfaced as a portfolio company of accel and added to the API Evangelist network as a stub for enrichment. Sector: cloud-saas. This profile is a lead awaiting the enrichment pipeline.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-Backed by: accel — http://www.useavenue.com/
+Avenue is an operations observability and workflow-automation platform that helps operations, RevOps, and support teams detect problems and act on them in real time. It connects to the tools and databases a business already runs on (Postgres, Google Sheets, Salesforce, Zendesk, Slack, Linear, Asana, Notion), watches for issues using custom rules and thresholds, and routes alerts into a shared task queue where teams triage and resolve them. A drag-and-drop playbook builder and an operational AI copilot automate routine responses, while metrics track resolution over time. Avenue is used by operations leaders at marketplaces, fintech, and healthcare companies. It was founded in 2021 by Justin Bleuel and Jeff Barg, and was backed by Y Combinator, Slack Fund, Accel, Flexport, Lachy Groom, and Elad Gil. Avenue was acquired by Clay in January 2025 and the product has since been wound down: the marketing site at avenue.app is still served but frozen at "© 2024 Avenue", the application host app.useavenue.com returns HTTP 404 "Application not found", and the Intercom help center at docs.useavenue.com returns HTTP 403. Avenue never published a public API, OpenAPI specification, SDK, MCP server, or agent card; the only developer- facing surface it documented was inbound and outbound webhooks.
+
+**Areas:** Company · Cloud Saas · Observability · Workflow Automation · Alerting · Revenue Operations · Task Queue · Defunct
+
+## Avenue on APIs.io (historical record)
+
+Everything profiled for Avenue is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/avenue/](https://apis.io/providers/avenue/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Avenue Webhooks](https://apis.io/asyncapis/avenue/avenue-webhooks/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Avenue Domain Security](https://apis.io/security/avenue/avenue-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Avenue Plans Pricing](https://apis.io/plans/avenue/avenue-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Avenue Rate Limits](https://apis.io/rate-limits/avenue/avenue-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://avenue.app/)
+- [Pricing](https://avenue.app/pricing)
+- [Blog](https://avenue.app/blog)
+- [Terms of service](https://avenue.app/terms)
+- [Privacy policy](https://avenue.app/privacy-policy)
+- [GitHub](https://github.com/Avenue-Alerting)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Avenue: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/avenue/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
